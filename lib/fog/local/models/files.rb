@@ -1,10 +1,10 @@
 module Fog
-  module Storage
-    class Local
+  module Local
+    class Storage
       class Files < Fog::Collection
         attribute :directory
 
-        model Fog::Storage::Local::File
+        model File
 
         def all
           requires :directory
@@ -69,6 +69,10 @@ module Fog
         def new(attributes = {})
           requires :directory
           super({ :directory => directory }.merge!(attributes))
+        end
+
+        def is_truncated
+          false
         end
 
         private
