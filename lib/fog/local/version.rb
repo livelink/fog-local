@@ -1,5 +1,5 @@
 module Fog
   module Local
-    VERSION = '1'
+    VERSION = '0.6.0.ll.1'
   end
 end
